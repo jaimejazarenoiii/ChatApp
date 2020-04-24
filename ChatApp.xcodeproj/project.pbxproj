@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -50,7 +50,6 @@
 				713C7C234AC1FBC5720867CC /* Pods-ChatApp.debug.xcconfig */,
 				117A7CBE003891C70E91FCE0 /* Pods-ChatApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -137,7 +136,6 @@
 		B3AEDC9424531243001D8DAA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				B3AEDC9D245314E6001D8DAA /* LaunchScreen.storyboard */,
 				B3AEDC80245310F8001D8DAA /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -146,6 +144,7 @@
 		B3AEDC9524531266001D8DAA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B3AEDC9D245314E6001D8DAA /* LaunchScreen.storyboard */,
 				B3AEDC88245310F8001D8DAA /* Info.plist */,
 			);
 			path = "Supporting Files";
