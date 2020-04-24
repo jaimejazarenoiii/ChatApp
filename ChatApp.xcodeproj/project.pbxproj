@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		B3AEDC7B245310F4001D8DAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AEDC7A245310F4001D8DAA /* AppDelegate.swift */; };
 		B3AEDC7D245310F4001D8DAA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AEDC7C245310F4001D8DAA /* SceneDelegate.swift */; };
-		B3AEDC7F245310F4001D8DAA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AEDC7E245310F4001D8DAA /* ContentView.swift */; };
 		B3AEDC81245310F8001D8DAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3AEDC80245310F8001D8DAA /* Assets.xcassets */; };
-		B3AEDC84245310F8001D8DAA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3AEDC83245310F8001D8DAA /* Preview Assets.xcassets */; };
-		B3AEDC87245310F8001D8DAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3AEDC85245310F8001D8DAA /* LaunchScreen.storyboard */; };
+		B3AEDC982453128C001D8DAA /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AEDC972453128C001D8DAA /* OnboardingViewController.swift */; };
+		B3AEDC9A245312B3001D8DAA /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AEDC99245312B3001D8DAA /* ApplicationCoordinator.swift */; };
+		B3AEDC9C245312F6001D8DAA /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AEDC9B245312F6001D8DAA /* Coordinator.swift */; };
+		B3AEDC9F245314E6001D8DAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3AEDC9D245314E6001D8DAA /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B3AEDC77245310F4001D8DAA /* ChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3AEDC7A245310F4001D8DAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3AEDC7C245310F4001D8DAA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B3AEDC7E245310F4001D8DAA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B3AEDC80245310F8001D8DAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B3AEDC83245310F8001D8DAA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		B3AEDC86245310F8001D8DAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B3AEDC88245310F8001D8DAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3AEDC972453128C001D8DAA /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		B3AEDC99245312B3001D8DAA /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		B3AEDC9B245312F6001D8DAA /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		B3AEDC9E245314E6001D8DAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ChatApp/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,23 +58,88 @@
 		B3AEDC79245310F4001D8DAA /* ChatApp */ = {
 			isa = PBXGroup;
 			children = (
-				B3AEDC7A245310F4001D8DAA /* AppDelegate.swift */,
-				B3AEDC7C245310F4001D8DAA /* SceneDelegate.swift */,
-				B3AEDC7E245310F4001D8DAA /* ContentView.swift */,
-				B3AEDC80245310F8001D8DAA /* Assets.xcassets */,
-				B3AEDC85245310F8001D8DAA /* LaunchScreen.storyboard */,
-				B3AEDC88245310F8001D8DAA /* Info.plist */,
-				B3AEDC82245310F8001D8DAA /* Preview Content */,
+				B3AEDC9224531206001D8DAA /* App Delegate */,
+				B3AEDC8F245311E3001D8DAA /* Application Coordinator */,
+				B3AEDC91245311F6001D8DAA /* Enums */,
+				B3AEDC90245311EC001D8DAA /* Models */,
+				B3AEDC9424531243001D8DAA /* Resources */,
+				B3AEDC9324531219001D8DAA /* Scene Delegate */,
+				B3AEDC8E245311DC001D8DAA /* Scenes */,
+				B3AEDC9524531266001D8DAA /* Supporting Files */,
 			);
 			path = ChatApp;
 			sourceTree = "<group>";
 		};
-		B3AEDC82245310F8001D8DAA /* Preview Content */ = {
+		B3AEDC8E245311DC001D8DAA /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				B3AEDC83245310F8001D8DAA /* Preview Assets.xcassets */,
+				B3AEDC9624531275001D8DAA /* Onboarding */,
 			);
-			path = "Preview Content";
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		B3AEDC8F245311E3001D8DAA /* Application Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				B3AEDC99245312B3001D8DAA /* ApplicationCoordinator.swift */,
+			);
+			path = "Application Coordinator";
+			sourceTree = "<group>";
+		};
+		B3AEDC90245311EC001D8DAA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B3AEDC91245311F6001D8DAA /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				B3AEDC9B245312F6001D8DAA /* Coordinator.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		B3AEDC9224531206001D8DAA /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				B3AEDC7A245310F4001D8DAA /* AppDelegate.swift */,
+			);
+			path = "App Delegate";
+			sourceTree = "<group>";
+		};
+		B3AEDC9324531219001D8DAA /* Scene Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				B3AEDC7C245310F4001D8DAA /* SceneDelegate.swift */,
+			);
+			path = "Scene Delegate";
+			sourceTree = "<group>";
+		};
+		B3AEDC9424531243001D8DAA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B3AEDC9D245314E6001D8DAA /* LaunchScreen.storyboard */,
+				B3AEDC80245310F8001D8DAA /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B3AEDC9524531266001D8DAA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B3AEDC88245310F8001D8DAA /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B3AEDC9624531275001D8DAA /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				B3AEDC972453128C001D8DAA /* OnboardingViewController.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,9 +200,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3AEDC87245310F8001D8DAA /* LaunchScreen.storyboard in Resources */,
-				B3AEDC84245310F8001D8DAA /* Preview Assets.xcassets in Resources */,
 				B3AEDC81245310F8001D8DAA /* Assets.xcassets in Resources */,
+				B3AEDC9F245314E6001D8DAA /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,18 +213,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3AEDC7B245310F4001D8DAA /* AppDelegate.swift in Sources */,
+				B3AEDC982453128C001D8DAA /* OnboardingViewController.swift in Sources */,
+				B3AEDC9C245312F6001D8DAA /* Coordinator.swift in Sources */,
 				B3AEDC7D245310F4001D8DAA /* SceneDelegate.swift in Sources */,
-				B3AEDC7F245310F4001D8DAA /* ContentView.swift in Sources */,
+				B3AEDC9A245312B3001D8DAA /* ApplicationCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B3AEDC85245310F8001D8DAA /* LaunchScreen.storyboard */ = {
+		B3AEDC9D245314E6001D8DAA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B3AEDC86245310F8001D8DAA /* Base */,
+				B3AEDC9E245314E6001D8DAA /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -285,9 +353,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"ChatApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = 6CXX9WJRR3;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = ChatApp/Info.plist;
+				INFOPLIST_FILE = "ChatApp/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -295,7 +365,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jaimejazarenoiii.ChatApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -304,9 +374,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"ChatApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = 6CXX9WJRR3;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = ChatApp/Info.plist;
+				INFOPLIST_FILE = "ChatApp/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -314,7 +386,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jaimejazarenoiii.ChatApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

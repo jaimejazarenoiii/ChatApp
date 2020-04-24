@@ -12,6 +12,8 @@ import SwiftUI
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    /// Declaration of `ApplicationCoordinator`
+    private var applicationCoordinator: ApplicationCoordinator?
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -19,15 +21,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
-        // Create the SwiftUI view that provides the window contents.
-        let contentView = ContentView()
-
-        // Use a UIHostingController as window root view controller.
+        guard let _ = (scene as? UIWindowScene) else { return }
         if let windowScene = scene as? UIWindowScene {
-            let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = UIHostingController(rootView: contentView)
-            self.window = window
-            window.makeKeyAndVisible()
+            self.window = UIWindow(windowScene: windowScene)
+            if let window = self.window {
+                let applicationCoordinator = ApplicationCoordinator(window: window)
+                self.applicationCoordinator = applicationCoordinator
+                applicationCoordinator.start()
+            }
         }
     }
 
