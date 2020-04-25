@@ -32,7 +32,6 @@
 		B3AEDCCC2453EF4C001D8DAA /* UILabel+Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AEDCCB2453EF4C001D8DAA /* UILabel+Spacing.swift */; };
 		B3AEDCCE2453F1E9001D8DAA /* SignUpViewController+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AEDCCD2453F1E9001D8DAA /* SignUpViewController+View.swift */; };
 		B3AEDCD12453F304001D8DAA /* DefaultTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AEDCD02453F304001D8DAA /* DefaultTextField.swift */; };
-		B3AEDCD824540D52001D8DAA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3AEDCD724540D52001D8DAA /* GoogleService-Info.plist */; };
 		B3AEDCDB24540E98001D8DAA /* String+Validations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AEDCDA24540E98001D8DAA /* String+Validations.swift */; };
 		B3AEDCDE24542227001D8DAA /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AEDCDD24542227001D8DAA /* ChatViewController.swift */; };
 		B3AEDCE024542230001D8DAA /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AEDCDF24542230001D8DAA /* ChatViewModel.swift */; };
@@ -49,6 +48,7 @@
 		B3AEDCFB2454A7DE001D8DAA /* ChatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AEDCFA2454A7DE001D8DAA /* ChatCollectionViewCell.swift */; };
 		B3AEDCFE2454A844001D8DAA /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AEDCFD2454A844001D8DAA /* ReusableView.swift */; };
 		B3DBDBFC2454CB74000AE84F /* ApplicationCoordinator+Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DBDBFB2454CB74000AE84F /* ApplicationCoordinator+Chat.swift */; };
+		B3DBDBFE2454DBD3000AE84F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3DBDBFD2454DBD3000AE84F /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,7 +81,6 @@
 		B3AEDCCD2453F1E9001D8DAA /* SignUpViewController+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUpViewController+View.swift"; sourceTree = "<group>"; };
 		B3AEDCD02453F304001D8DAA /* DefaultTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTextField.swift; sourceTree = "<group>"; };
 		B3AEDCD224540CE1001D8DAA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		B3AEDCD724540D52001D8DAA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B3AEDCDA24540E98001D8DAA /* String+Validations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Validations.swift"; sourceTree = "<group>"; };
 		B3AEDCDD24542227001D8DAA /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		B3AEDCDF24542230001D8DAA /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
@@ -98,6 +97,7 @@
 		B3AEDCFA2454A7DE001D8DAA /* ChatCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCollectionViewCell.swift; sourceTree = "<group>"; };
 		B3AEDCFD2454A844001D8DAA /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		B3DBDBFB2454CB74000AE84F /* ApplicationCoordinator+Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApplicationCoordinator+Chat.swift"; sourceTree = "<group>"; };
+		B3DBDBFD2454DBD3000AE84F /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "GoogleService-Info.plist"; path = "ChatApp/Application Coordinator/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		B72F899F82593CF34F89E014 /* libPods-ChatApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChatApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -333,7 +333,7 @@
 		B3AEDCD624540D30001D8DAA /* Config */ = {
 			isa = PBXGroup;
 			children = (
-				B3AEDCD724540D52001D8DAA /* GoogleService-Info.plist */,
+				B3DBDBFD2454DBD3000AE84F /* GoogleService-Info.plist */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -487,7 +487,7 @@
 			files = (
 				B3AEDC81245310F8001D8DAA /* Images.xcassets in Resources */,
 				B3AEDCA72453CC00001D8DAA /* Colors.xcassets in Resources */,
-				B3AEDCD824540D52001D8DAA /* GoogleService-Info.plist in Resources */,
+				B3DBDBFE2454DBD3000AE84F /* GoogleService-Info.plist in Resources */,
 				B3AEDCA52453CBE4001D8DAA /* Localizable.strings in Resources */,
 				B3AEDCA12453183A001D8DAA /* LaunchScreen.storyboard in Resources */,
 			);
