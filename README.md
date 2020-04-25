@@ -1,11 +1,11 @@
 # ChatApp
 
-A Chat app using firestore as storage
+A Chat app using firebase as storage
 
 ## Requirements
 
-  * >= iOS 13
-  * >= Xcode 11
+  * ">= iOS 13"
+  * ">= Xcode 11"
 
 ## Setup
 
