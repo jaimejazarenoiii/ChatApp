@@ -67,16 +67,6 @@ bundle install --verbose
 echo "🍫 Install Cocoapods 🍫 \n"
 bundle exec pod install --verbose
 
-# Pull secrets
-echo "🔐 Copy secrets from another repo 🔐 \n"
-git clone https://github.com/jaimejazarenoiii/ChatAppConfigs.git
-cp ChatAppConfigs/**.plist ChatApp/Supporting\ Files/
-ruby copy_secrets_to_xcode.rb
-
-# Delete secrets repo
-echo "⛔️  Delete secrets repo ⛔️ \n"
-rm -rf ChatAppConfigs
-
 # Build xcode
 echo "🛠  Build xcode 🛠 \n"
 xcodebuild build -workspace ChatApp.xcworkspace -scheme ChatApp

@@ -48,7 +48,7 @@
 		B3AEDCFB2454A7DE001D8DAA /* ChatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AEDCFA2454A7DE001D8DAA /* ChatCollectionViewCell.swift */; };
 		B3AEDCFE2454A844001D8DAA /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AEDCFD2454A844001D8DAA /* ReusableView.swift */; };
 		B3DBDBFC2454CB74000AE84F /* ApplicationCoordinator+Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DBDBFB2454CB74000AE84F /* ApplicationCoordinator+Chat.swift */; };
-		B3DBDBFE2454DBD3000AE84F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3DBDBFD2454DBD3000AE84F /* GoogleService-Info.plist */; };
+		B3DBDC012454DF63000AE84F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3AEDCD224540CE1001D8DAA /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,7 +97,6 @@
 		B3AEDCFA2454A7DE001D8DAA /* ChatCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCollectionViewCell.swift; sourceTree = "<group>"; };
 		B3AEDCFD2454A844001D8DAA /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		B3DBDBFB2454CB74000AE84F /* ApplicationCoordinator+Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApplicationCoordinator+Chat.swift"; sourceTree = "<group>"; };
-		B3DBDBFD2454DBD3000AE84F /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "GoogleService-Info.plist"; path = "ChatApp/Application Coordinator/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		B72F899F82593CF34F89E014 /* libPods-ChatApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChatApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -147,7 +146,6 @@
 				B3AEDC8F245311E3001D8DAA /* Application Coordinator */,
 				B3AEDCA82453CE08001D8DAA /* Custom Components */,
 				B3AEDC91245311F6001D8DAA /* Enums */,
-				B3AEDCD424540CE7001D8DAA /* Generated */,
 				B3AEDC90245311EC001D8DAA /* Models */,
 				B3AEDCFC2454A82C001D8DAA /* Protocols */,
 				B3AEDC9424531243001D8DAA /* Resources */,
@@ -322,22 +320,6 @@
 			path = UITextField;
 			sourceTree = "<group>";
 		};
-		B3AEDCD424540CE7001D8DAA /* Generated */ = {
-			isa = PBXGroup;
-			children = (
-				B3AEDCD624540D30001D8DAA /* Config */,
-			);
-			path = Generated;
-			sourceTree = "<group>";
-		};
-		B3AEDCD624540D30001D8DAA /* Config */ = {
-			isa = PBXGroup;
-			children = (
-				B3DBDBFD2454DBD3000AE84F /* GoogleService-Info.plist */,
-			);
-			path = Config;
-			sourceTree = "<group>";
-		};
 		B3AEDCD924540E8D001D8DAA /* String */ = {
 			isa = PBXGroup;
 			children = (
@@ -430,7 +412,6 @@
 			buildConfigurationList = B3AEDC8B245310F8001D8DAA /* Build configuration list for PBXNativeTarget "ChatApp" */;
 			buildPhases = (
 				5833B227F8E75FA4F1BAB3B8 /* [CP] Check Pods Manifest.lock */,
-				B3AEDCD524540CFB001D8DAA /* Copy GoogleService-Info.plist */,
 				B3AEDC73245310F4001D8DAA /* Sources */,
 				B3AEDC74245310F4001D8DAA /* Frameworks */,
 				B3AEDC75245310F4001D8DAA /* Resources */,
@@ -487,7 +468,7 @@
 			files = (
 				B3AEDC81245310F8001D8DAA /* Images.xcassets in Resources */,
 				B3AEDCA72453CC00001D8DAA /* Colors.xcassets in Resources */,
-				B3DBDBFE2454DBD3000AE84F /* GoogleService-Info.plist in Resources */,
+				B3DBDC012454DF63000AE84F /* GoogleService-Info.plist in Resources */,
 				B3AEDCA52453CBE4001D8DAA /* Localizable.strings in Resources */,
 				B3AEDCA12453183A001D8DAA /* LaunchScreen.storyboard in Resources */,
 			);
@@ -570,24 +551,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif [ -f \"${PODS_ROOT}/SwiftLint/swiftlint\" ]; then\n  \"${PODS_ROOT}/SwiftLint/swiftlint\"\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\n  exit 1\nfi\n";
-		};
-		B3AEDCD524540CFB001D8DAA /* Copy GoogleService-Info.plist */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Copy GoogleService-Info.plist";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncp -fp \"${SRCROOT}/ChatApp/Supporting Files/GoogleService-Info.plist\" \"${SRCROOT}/ChatApp/Generated/Config/GoogleService-Info.plist\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

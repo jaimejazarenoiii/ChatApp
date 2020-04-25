@@ -22,7 +22,6 @@ This will:
   * Check if **bundler** is installed and install it if not
   * Install **Gems**
   * Install **Cocoapods**
-  * Copy secrets from another repo
   * Build **Xcode**
 
 ## Architecture
