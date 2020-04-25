@@ -7,7 +7,9 @@
 //
 
 import UIKit
+import SwiftyUserDefaults
 
+/// Class for coordinating view controllers and do the navigations
 class ApplicationCoordinator: Coordinator {
     /// Declaration of window type `UIWindow`
     let window: UIWindow
@@ -27,8 +29,13 @@ class ApplicationCoordinator: Coordinator {
      - Returns: Void
      */
     func start() {
-        let onboardingVc = OnboardingViewController()
-        self.window.rootViewController = onboardingVc
+        if Defaults[\.user] != nil {
+            displayChatView()
+        } else {
+            let onboardingVc = OnboardingViewController()
+            onboardingVc.delegate = self
+            self.window.rootViewController = onboardingVc
+        }
         self.window.makeKeyAndVisible()
     }
 }
