@@ -6,26 +6,42 @@
 //  Copyright © 2020 Jaime Jazareno III. All rights reserved.
 //
 
+import ReactiveCocoa
 import UIKit
 
-class OnboardingViewController: UIViewController {
+/// Delegate for `OnboardingViewController`
+protocol OnboardingViewControllerDelegate: class {
+    func onboardingViewControllerDidTapSignupButton(_ source: OnboardingViewController)
+    func onboardingViewControllerDidTapSigninButton(_ source: OnboardingViewController)
+}
 
+/// Onboarding view
+class OnboardingViewController: UIViewController {
+    var logo: UIImageView = UIImageView()
+    var signUpButton: DefaultButton = DefaultButton()
+    var signInButton: DefaultButton = DefaultButton()
+    weak var delegate: OnboardingViewControllerDelegate?
+
+    /// Setup view and subviews
+    override func loadView() {
+        super.loadView()
+        view.backgroundColor = .white
+        setupScene()
+    }
+
+    /// Setup bindings
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
-
-        // Do any additional setup after loading the view.
+        setupBindings()
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    /// Setup reactive bindings
+    private func setupBindings() {
+        signUpButton.reactive.controlEvents(.touchUpInside).observeValues { [unowned self] _ in
+            self.delegate?.onboardingViewControllerDidTapSignupButton(self)
+        }
+        signInButton.reactive.controlEvents(.touchUpInside).observeValues { [unowned self] _ in
+            self.delegate?.onboardingViewControllerDidTapSigninButton(self)
+        }
     }
-    */
-
 }
