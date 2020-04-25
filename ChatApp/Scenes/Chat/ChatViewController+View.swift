@@ -32,10 +32,12 @@ extension ChatViewController {
         textView.backgroundColor = Asset.Colors.defaultFormBackground.color
         textView.layer.cornerRadius = 5
         let color = Asset.Colors.defaultFormPlaceholderColor.color
-        let font: UIFont = .arialFont(size: 14)!
+        let font: UIFont = .arialFont(size: 16)!
         let attrStr = NSAttributedString(string: L10n.startANewMessage,
                                          attributes: [NSAttributedString.Key.foregroundColor: color,
                                                       NSAttributedString.Key.font: font])
+        textView.font = .arialFont(size: 16)
+        textView.addCharacterSpacing()
         textView.attributedPlaceholder = attrStr
         textView.selectedTextRange = textView.textRange(from: textView.beginningOfDocument,
                                                         to: textView.beginningOfDocument)
