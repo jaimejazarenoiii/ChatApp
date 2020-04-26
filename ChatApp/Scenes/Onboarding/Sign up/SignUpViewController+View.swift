@@ -88,6 +88,7 @@ extension SignUpViewController {
 
     private func setupSignUpButton() {
         signUpButton.setTitle(L10n.signUp, for: .normal)
+        signUpButton.titleLabel?.addCharacterSpacing()
 
         view.addSubview(signUpButton)
 
@@ -108,6 +109,7 @@ extension SignUpViewController {
         loginButton.setTitleColor(.black, for: .normal)
         loginButton.titleLabel?.font = .arialFont(size: 14)
         loginButton.backgroundColor = .clear
+        loginButton.titleLabel?.addCharacterSpacing()
 
         view.addSubview(loginButton)
 
@@ -118,11 +120,16 @@ extension SignUpViewController {
     }
 
     private func setupTermsLabel() {
-        termsLabel.font = .arialFont(size: 12)
-        termsLabel.text = L10n.terms
-        termsLabel.addCharacterSpacing()
         termsLabel.numberOfLines = 0
-        termsLabel.textColor = Asset.Colors.defaultFormPlaceholderColor.color
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineHeightMultiple = 1.4
+        let attrs: [NSAttributedString.Key: Any] = [
+            NSAttributedString.Key.font: UIFont.boldArialFont(size: 12)!,
+            NSAttributedString.Key.foregroundColor: Asset.Colors.defaultFormPlaceholderColor.color,
+            NSAttributedString.Key.paragraphStyle: paragraphStyle,
+            NSAttributedString.Key.kern: 1
+        ]
+        termsLabel.attributedText = NSAttributedString(string: L10n.terms, attributes: attrs)
 
         view.addSubview(termsLabel)
 

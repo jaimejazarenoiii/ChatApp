@@ -35,9 +35,10 @@ extension ChatViewController {
         let font: UIFont = .arialFont(size: 16)!
         let attrStr = NSAttributedString(string: L10n.startANewMessage,
                                          attributes: [NSAttributedString.Key.foregroundColor: color,
-                                                      NSAttributedString.Key.font: font])
+                                                      NSAttributedString.Key.font: font,
+                                                      NSAttributedString.Key.kern: 1])
         textView.font = .arialFont(size: 16)
-        textView.addCharacterSpacing()
+        textView.addCharacterSpacing(kernValue: 1)
         textView.attributedPlaceholder = attrStr
         textView.selectedTextRange = textView.textRange(from: textView.beginningOfDocument,
                                                         to: textView.beginningOfDocument)
@@ -53,7 +54,6 @@ extension ChatViewController {
     private func setupSendButton() {
         sendButton.setTitle(L10n.send, for: .normal)
         sendButton.titleEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-        sendButton.titleLabel?.addCharacterSpacing()
         sendButton.titleLabel?.adjustsFontSizeToFitWidth = true
         sendButton.backgroundColor = Asset.Colors.defaultGray.color
 

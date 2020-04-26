@@ -34,7 +34,13 @@ extension ChatViewController: UICollectionViewDelegateFlowLayout {
         let chat = self.viewModel.outputs.chats.value[indexPath.row]
         let width = view.frame.width
         let size = CGSize(width: width, height: 1000)
-        let attributes = [NSAttributedString.Key.font: UIFont.arialFont(size: 14)!]
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineHeightMultiple = 1.2
+        let attributes: [NSAttributedString.Key: Any] = [
+            NSAttributedString.Key.font: UIFont.arialFont(size: 14)!,
+            NSAttributedString.Key.kern: 1.15,
+            NSAttributedString.Key.paragraphStyle: paragraphStyle
+        ]
         let estimatedFrame = NSString(string: chat.message)
             .boundingRect(with: size,
                           options: .usesLineFragmentOrigin,

@@ -34,6 +34,7 @@ extension OnboardingViewController {
     private func setupSignupButton() {
         signUpButton.setTitle(L10n.signUp, for: .normal)
         signUpButton.backgroundColor = Asset.Colors.defaultDarkGreen.color
+        signUpButton.titleLabel?.addCharacterSpacing()
 
         view.addSubview(signUpButton)
 
@@ -46,6 +47,7 @@ extension OnboardingViewController {
 
     private func setupSigninButton() {
         signInButton.setTitle(L10n.logIn, for: .normal)
+        signInButton.titleLabel?.addCharacterSpacing()
 
         view.addSubview(signInButton)
 

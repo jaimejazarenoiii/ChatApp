@@ -52,6 +52,10 @@ class ChatCollectionViewCell: UICollectionViewCell, ReusableView {
                 make.right.lessThanOrEqualToSuperview().offset(-15)
             }
         }
+
+        nameLabel.addCharacterSpacing()
+        chatLabel.addCharacterSpacing()
+        chatLabel.setLineSpacing(lineHeightMultiple: 1.2)
     }
 
     private func setupCell() {
@@ -110,7 +114,6 @@ class ChatCollectionViewCell: UICollectionViewCell, ReusableView {
 
     private func setupChatLabel() {
         chatLabel.font = .arialFont(size: 14)
-        chatLabel.addCharacterSpacing(kernValue: 3)
         chatLabel.textColor = .white
         chatLabel.numberOfLines = 0
         chatLabel.translatesAutoresizingMaskIntoConstraints = false

@@ -26,7 +26,7 @@ class DefaultButton: UIButton {
     /// Setups button's attributes
     private func setupButton() {
         backgroundColor = Asset.Colors.defaultGreen.color
-        titleLabel?.font = .boldArialFont(size: 16)
+        titleLabel?.font = .boldArialFont(size: 20)
         tintColor = .white
         setTitleColor(.white, for: .normal)
         layer.cornerRadius = 5.0
